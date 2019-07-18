@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="style/images/favicon.png">
+<title>Hygge</title>
+<!-- Bootstrap core CSS -->
+<link href="style/css/bootstrap.min.css" rel="stylesheet">
+<link href="style/css/plugins.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="style/css/color/green.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="style/type/icons.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+  <div class="light-wrapper">
+    <div class="container inner">
+
+      <div class="service text-center" style="padding-top: 0px;padding-bottom: 0px">
+        <div class="icon"> <img src="style/images/logo.svg" alt="" /> </div>
+
+      </div>
+
+      <div class="offset"></div>
+
+
+      <div class="row text-center" style="padding-bottom: 30px">
+
+        <a  class="btn" type="button" onclick="location.href='index.html' ">RESET ALL</a>
+        <a  class="btn" type="button" onclick="moveAll(this)" value="START" id="moveAllBtn">STOP/START ALL</a>
+
+      </div>
+
+
+      <div class="cbp-panel">
+        <div id="filters-container" class="cbp-filter-container text-center">
+          <div data-filter=".cinci" class="cbp-filter-item-active cbp-filter-item"> 5 candidați </div>
+          <div data-filter=".patru" class="cbp-filter-item"> 4 candidați  </div>
+          <div data-filter=".trei" class="cbp-filter-item"> 3 candidați  </div>
+
+
+        </div>
+        <div id="grid-container" class="cbp">
+
+
+          <div class="col-sm-6 col-md-4 cbp-item trei patru cinci">
+            <div class="pricing panel">
+              <div class="panel-heading">
+                <h3 class="panel-title"style="padding-bottom: 30px">Candidat 1</h3>
+                <div class="price"> <span class="price-value" id="timerLabel1">00:00.00</span>
+                </div>
+              </div>
+              <!--/.panel-heading -->
+              <div class="panel-body">
+                <table class="table">
+                </table>
+              </div>
+              <!--/.panel-body -->
+              <div class="panel-footer">
+                <a  class="btn" role="button" onclick="start_stop(this)" value="START" id="start1">START/STOP</a>
+                <a  class="btn" role="button" onclick="reset(this)" value="RESET" id="reset1">RESET</a>
+              </div>
+            </div>
+            <!--/.pricing -->
+          </div>
+          <!--/column -->
+
+
+
+          <div class="col-sm-6 col-md-4 cbp-item trei patru cinci">
+            <div class="pricing panel">
+              <div class="panel-heading">
+                <h3 class="panel-title" style="padding-bottom: 30px">Candidat 2</h3>
+                <div class="price"> <span class="price-value" id="timerLabel2">00:00.00</span> </div>
+              </div>
+              <!--/.panel-heading -->
+              <div class="panel-body">
+                <table class="table">
+                </table>
+              </div>
+              <!--/.panel-body -->
+              <div class="panel-footer">
+                <a  class="btn" role="button" onclick="start_stop(this)" value="START" id="start2">START/STOP</a>
+                <a  class="btn" role="button" onclick="reset(this)" value="RESET" id="reset2">RESET</a>
+              </div>
+            </div>
+            <!--/.pricing -->
+          </div>
+          <!--/column -->
+
+
+          <div class="col-sm-6 col-md-4 cbp-item trei patru cinci">
+            <div class="pricing panel">
+              <div class="panel-heading">
+                <h3 class="panel-title" style="padding-bottom: 30px">Candidat 3</h3>
+                <div class="price"> <span class="price-value" id="timerLabel3">00:00.00</span> </div>
+              </div>
+              <!--/.panel-heading -->
+              <div class="panel-body">
+                <table class="table">
+
+                </table>
+              </div>
+              <!--/.panel-body -->
+              <div class="panel-footer">
+                <a  class="btn" role="button" onclick="start_stop(this)" value="START" id="start3">START/STOP</a>
+                <a  class="btn" role="button" onclick="reset(this)" value="RESET" id="reset3">RESET</a>
+              </div>
+            </div>
+            <!--/.pricing -->
+          </div>
+          <!--/column -->
+
+          <div class="col-sm-6 col-md-4 col-lg-offset-2 cbp-item  patru cinci">
+            <div class="pricing panel">
+              <div class="panel-heading">
+                <h3 class="panel-title" style="padding-bottom: 30px">Candidat 4</h3>
+                <div class="price"> <span class="price-value" id="timerLabel4">00:00.00</span> </div>
+              </div>
+              <!--/.panel-heading -->
+              <div class="panel-body">
+                <table class="table">
+
+                </table>
+              </div>
+              <!--/.panel-body -->
+              <div class="panel-footer">
+                <a  class="btn" role="button" onclick="start_stop(this)" value="START" id="start4">START/STOP</a>
+                <a  class="btn" role="button" onclick="reset(this)" value="RESET" id="reset4">RESET</a>
+              </div>
+            </div>
+            <!--/.pricing -->
+          </div>
+          <!--/column -->
+
+
+
+          <div class="col-sm-6 col-md-4 cbp-item  cinci">
+            <div class="pricing panel">
+              <div class="panel-heading">
+                <h3 class="panel-title" style="padding-bottom: 30px">Candidat 5</h3>
+                <div class="price"> <span class="price-value" id="timerLabel5">00:00.00</span> </div>
+              </div>
+              <!--/.panel-heading -->
+              <div class="panel-body">
+                <table class="table">
+
+                </table>
+              </div>
+              <!--/.panel-body -->
+              <div class="panel-footer">
+                <a  class="btn" role="button" onclick="start_stop(this)" value="START" id="start5">START/STOP</a>
+                <a  class="btn" role="button" onclick="reset(this)" value="RESET" id="reset5">RESET</a>
+              </div>
+            </div>
+            <!--/.pricing -->
+          </div>
+          <!--/column -->
+
+
+
+
+
+        </div>
+        <!--/.cbp -->
+
+      </div>
+      <!--/.cbp-panel -->
+
+
+      <div class="row">
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <!--/.row -->
+    </div>
+  </div>
+</div>
+
+<script>
+    var status_sw1 = 0;
+    var status_sw2 = 0;
+    var status_sw3 = 0;
+    var status_sw4 = 0;
+    var status_sw5 = 0;
+
+
+
+    var time_sw1 = 0;
+    var time_sw2 = 0;
+    var time_sw3 = 0;
+    var time_sw4 = 0;
+    var time_sw5 = 0;
+
+
+
+    var startBtn1 = document.getElementById("start1");
+    var startBtn2 = document.getElementById("start2");
+    var startBtn3 = document.getElementById("start3");
+    var startBtn4 = document.getElementById("start4");
+    var startBtn5 = document.getElementById("start5");
+
+
+    var timerLabel1 = document.getElementById("timerLabel1");
+    var timerLabel2 = document.getElementById("timerLabel2");
+    var timerLabel3 = document.getElementById("timerLabel3");
+    var timerLabel4 = document.getElementById("timerLabel4");
+    var timerLabel5 = document.getElementById("timerLabel5");
+
+
+
+    var moveAllBtn = document.getElementById("moveAllBtn");
+
+    function moveAll(obj) {
+
+        if (obj.value == 'START') {
+            status_sw1 = 1;
+            status_sw2 = 1;
+            status_sw3 = 1;
+            status_sw4 = 1;
+            status_sw5 = 1;
+
+
+            timer1();
+            timer2();
+            timer3();
+            timer4();
+            timer5();
+
+
+            startBtn1.value = "STOP";
+            startBtn2.value = "STOP";
+            startBtn3.value = "STOP";
+            startBtn4.value = "STOP";
+            startBtn5.value = "STOP";
+
+
+            obj.value = "STOP";
+
+        } else {
+            status_sw1 = 0;
+            status_sw2 = 0;
+            status_sw3 = 0;
+            status_sw4 = 0;
+            status_sw5 = 0;
+
+
+            startBtn1.value = "START";
+            startBtn2.value = "START";
+            startBtn3.value = "START";
+            startBtn4.value = "START";
+            startBtn5.value = "START";
+
+
+            obj.value = "START";
+        }
+
+    }
+
+
+    function start_stop(obj) {
+
+        var stopwatch = obj.id;
+
+        if (stopwatch == 'start1') {
+            if (status_sw1 == 0) {
+                status_sw1 = 1;
+                timer1();
+            } else {
+                status_sw1 = 0;
+            }
+        }
+
+        if (stopwatch == 'start2') {
+            if (status_sw2 == 0) {
+                status_sw2 = 1;
+                timer2();
+            } else {
+                status_sw2 = 0;
+            }
+        }
+
+        if (stopwatch == 'start3') {
+            if (status_sw3 == 0) {
+                status_sw3 = 1;
+                timer3();
+            } else {
+                status_sw3 = 0;
+            }
+        }
+
+        if (stopwatch == 'start4') {
+            if (status_sw4 == 0) {
+                status_sw4 = 1;
+                timer4();
+            } else {
+                status_sw4 = 0;
+            }
+        }
+
+        if (stopwatch == 'start5') {
+            if (status_sw5 == 0) {
+                status_sw5 = 1;
+                timer5();
+            } else {
+                status_sw5 = 0;
+            }
+        }
+
+        if (obj.value == "START") {
+            obj.value = "STOP";
+
+        } else {
+            obj.value = "START";
+        }
+    }
+
+
+
+    function reset(obj) {
+        var stopwatch = obj.id;
+
+        if (stopwatch == 'reset1') {
+            status_sw1 = 0;
+            time_sw1 = 0;
+            timerLabel1.innerHTML = "00:00.00";
+            startBtn1.value = "START";
+        }
+
+        if (stopwatch == 'reset2') {
+            status_sw2 = 0;
+            time_sw2 = 0;
+            timerLabel2.innerHTML = "00:00.00";
+            startBtn2.value = "START";
+        }
+
+        if (stopwatch == 'reset3') {
+            status_sw3 = 0;
+            time_sw3 = 0;
+            timerLabel3.innerHTML = "00:00.00";
+            startBtn3.value = "START";
+        }
+
+        if (stopwatch == 'reset4') {
+            status_sw4 = 0;
+            time_sw4 = 0;
+            timerLabel4.innerHTML = "00:00.00";
+            startBtn4.value = "START";
+        }
+
+        if (stopwatch == 'reset5') {
+            status_sw5 = 0;
+            time_sw5 = 0;
+            timerLabel5.innerHTML = "00:00.00";
+            startBtn5.value = "START";
+        }
+
+
+    }
+
+
+    function timer1() {
+        if (status_sw1 == 1) {
+            setTimeout(function(){
+                time_sw1++;
+                timerLabel1.innerHTML = getTime(time_sw1);
+                timer1();
+            }, 10);
+        }
+        checkAllBtn();
+    }
+
+    function timer2() {
+        if (status_sw2 == 1) {
+            setTimeout(function(){
+                time_sw2++;
+                timerLabel2.innerHTML = getTime(time_sw2);
+                timer2();
+            }, 10);
+        }
+        checkAllBtn();
+    }
+
+    function timer3() {
+        if (status_sw3 == 1) {
+            setTimeout(function(){
+                time_sw3++;
+                timerLabel3.innerHTML = getTime(time_sw3);
+                timer3();
+            }, 10);
+        }
+        checkAllBtn();
+    }
+
+
+    function timer4() {
+        if (status_sw4 == 1) {
+            setTimeout(function(){
+                time_sw4++;
+                timerLabel4.innerHTML = getTime(time_sw4);
+                timer4();
+            }, 10);
+        }
+        checkAllBtn();
+    }
+
+    function timer5() {
+        if (status_sw5 == 1) {
+            setTimeout(function(){
+                time_sw5++;
+                timerLabel5.innerHTML = getTime(time_sw5);
+                timer5();
+            }, 10);
+        }
+        checkAllBtn();
+    }
+
+
+    function checkAllBtn() {
+
+        if (status_sw1 == 1 || status_sw2 == 1 || status_sw3 == 1 || status_sw4 == 1 || status_sw5 == 1) {
+            moveAllBtn.value = "STOP";
+        }
+
+        if (status_sw1 == 0 && status_sw2 == 0 && status_sw3 == 0 && status_sw4 == 0 && status_sw5 == 0) {
+            moveAllBtn.value = "START";
+        }
+
+    }
+
+
+    function getTime(time) {
+
+        var min = Math.floor(time/100/60);
+        var sec = Math.floor(time/100);
+        var mSec = time%100;
+
+        if (min < 10) {
+            min = "0" + min;
+        }
+        if (sec >= 60) {
+            sec = sec % 60;
+        }
+        if (sec < 10) {
+            sec = "0" + sec;
+        }
+
+        return min + ":" + sec + "." + mSec;
+
+    }
+
+</script>
+
+
+<!--/.body-wrapper -->
+<script src="style/js/jquery.min.js"></script>
+<script src="style/js/bootstrap.min.js"></script>
+<script src="style/js/plugins.js"></script>
+<script src="style/js/jquery.themepunch.tools.min.js"></script>
+<script src="style/js/scripts.js"></script>
+</body>
+</html>
